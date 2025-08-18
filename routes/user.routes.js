@@ -4,8 +4,6 @@ import authorize from '../middlewares/auth.middleware.js'
 import { getUsers,getUser } from "../controllers/user.controller.js";
 
 userRouter.get('/',getUsers)
-userRouter.get('/get-users',getUsers)
-
 userRouter.get('/:id',authorize,getUser)
 
 userRouter.post('/',(req,res)=>{
